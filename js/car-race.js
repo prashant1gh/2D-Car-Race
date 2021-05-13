@@ -100,7 +100,8 @@ CarRace.prototype.bindEvents = function() {
 CarRace.prototype.reset = function() {
     var game = this;
 
-    game.score = 0;
+    score = 0;
+    game.velocity = 5;
     game.obstacleFactory.obstacles = [];
 }
 
@@ -194,28 +195,17 @@ CarRace.prototype.ifCollided = function(playerCar, obstacle) {
     var game = this;
     var isCollided = false;
 
-    // //player car coordinates
-    // var playerCarTop = playerCar.y;
-    // var playerCarRight = playerCar.x + playerCar.w;
-    // var playerCarLeft = playerCar.x;
+    if (obstacle.x < playerCar.x + playerCar.w &&
+        obstacle.x + obstacle.w > playerCar.x &&
+        obstacle.y + obstacle.h > playerCar.y) {
 
-    // //obstactle coordinates
-    // var obstacleLeft = obstacle.x;
-    // var obstacleBottom = obstacle.y + obstacle.h;
-    // var obstacleRight = obstacle.x + obstacle.w;
-
-    if ((obstacle.x + obstacle.w) >= (playerCar.x) &&
-        (obstacle.x) <= (playerCar.x + playerCar.w) &&
-        (obstacle.y + obstacle.h) >= playerCar.y &&
-        obstacle.y <= (playerCar.y + playerCar.h)
-    ) {
         isCollided = true;
     }
 
-
-
     return isCollided;
+
 }
+
 
 CarRace.prototype.drawObstacle = function() {
     var game = this;

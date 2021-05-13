@@ -32,8 +32,4 @@ Obstacle.prototype.draw = function() {
 
 
     }
-
-    // obstacle.context.fillStyle = 'black';
-    // obstacle.context.fillRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
-    // obstacle.context.fill();
 }

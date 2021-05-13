@@ -37,6 +37,8 @@ PlayerCar.prototype.draw = function() {
 
     }
 
+
+
 }
 
 PlayerCar.prototype.Position = function() {
