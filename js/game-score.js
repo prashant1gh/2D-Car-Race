@@ -9,6 +9,7 @@ function GameScore(score, canvas) {
     gameScore.x = 0;
     gameScore.y = 0;
 
+
 }
 
 

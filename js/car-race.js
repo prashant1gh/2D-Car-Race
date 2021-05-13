@@ -245,7 +245,7 @@ CarRace.prototype.animateBackground = function() {
     //background1
     game.background1.draw();
 
-    if (Math.abs(game.background1.y) > game.canvas.height) {
+    if (game.background1.y > game.canvas.height) {
         game.background1.y = -game.canvas.height + game.velocity;
     }
 
@@ -254,7 +254,7 @@ CarRace.prototype.animateBackground = function() {
     //background2
     game.background2.draw();
 
-    if (Math.abs(game.background2.y) > game.canvas.height) {
+    if (game.background2.y > game.canvas.height) {
         game.background2.y = -game.canvas.height + game.velocity;
     }
 
